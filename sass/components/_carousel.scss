@@ -1,36 +1,94 @@
-/* Gestion des fleches du carrousel */
 #banner {
+    @include flex-banner;
+    @include banner-size;
+    position: relative;
+
+    .carousel {
+        position: absolute;
+        @include full-size;
+        display: flex;
+        overflow: hidden;
+    }
+
+    overflow: hidden;
+
+    .banner-img {
+        @include full-size;
+        z-index: -1;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    p {
+        font-family: 'Roboto Slab', sans-serif;
+        font-weight: 900;
+        font-size: 50px;
+        line-height: 66px;
+        color: white;
+        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        text-align: center;
+    }
+
+    span {
+        display: block;
+        font-weight: 400;
+        font-size: 30px;
+    }
+
+    /* Gestion des fleches du carrousel */
     .arrow {
         position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-content: center;
+        @include banner-size;
+
+        img {
+            height: 60px;
+            width: 1.5%;
+        }
+
+        .arrow-left {
+            cursor: pointer;
+            margin-left: 40px;
+
+            &:hover {
+                background-color: #0f0f0f24;
+            }
+        }
+
+        .arrow-right {
+            cursor: pointer;
+            margin-right: 40px;
+
+            &:hover {
+                background-color: #0f0f0f24;
+            }
+        }
     }
 
-    .arrow_left {
-        left: 10px;
-    }
+    /* Gestion des points du carrousel */
+    .dots {
 
-    .arrow_right {
-        right: 10px;
-    }
-}
+        position: absolute;
+        bottom: 40px;
+        display: flex;
 
-/* Gestion des points du carrousel */
-.dots {
-    position: absolute;
-    bottom: 40px;
-    display: flex;
+        .dot {
+            cursor: pointer;
+            margin-inline: 5px;
+            width: 13px;
+            height: 13px;
+            background-color: #ffffff00;
+            border: 3px solid #fff;
+            border-radius: 100%;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            ;
+        }
 
-    .dot {
-        margin-inline: 5px;
-        width: 13px;
-        height: 13px;
-        background-color: #ffffff00;
-        border: 3px solid #fff;
-        border-radius: 100%;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-        ;
-    }
-
-    .dot_selected {
-        background-color: #fff;
+        .dot_selected {
+            background-color: #fff;
+        }
     }
 }

@@ -198,6 +198,7 @@ header {
   background-color: var(--secondary-color);
 }
 
+/* Carousel pour la bannière */
 #banner {
   display: flex;
   flex-direction: column;
@@ -206,49 +207,24 @@ header {
   width: 100%;
   min-height: 470px;
   position: relative;
+  overflow: hidden;
+  /* Gestion des fleches du carrousel */
+  /* Gestion des points du carrousel */
 }
-
-.banner-img {
+#banner .carousel {
   position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+}
+#banner .banner-img {
   width: 100%;
   height: 100%;
   z-index: -1;
   object-fit: cover;
   object-position: center;
 }
-
-/* Carousel pour la bannière */
-/* Gestion des fleches du carrousel */
-#banner .arrow {
-  position: absolute;
-}
-#banner .arrow_left {
-  left: 10px;
-}
-#banner .arrow_right {
-  right: 10px;
-}
-
-/* Gestion des points du carrousel */
-.dots {
-  position: absolute;
-  bottom: 40px;
-  display: flex;
-}
-.dots .dot {
-  margin-inline: 5px;
-  width: 13px;
-  height: 13px;
-  background-color: rgba(255, 255, 255, 0);
-  border: 3px solid #fff;
-  border-radius: 100%;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-}
-.dots .dot_selected {
-  background-color: #fff;
-}
-
-/* Fin du code CSS pour le carousel */
 #banner p {
   font-family: "Roboto Slab", sans-serif;
   font-weight: 900;
@@ -258,13 +234,58 @@ header {
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   text-align: center;
 }
-
 #banner span {
   display: block;
   font-weight: 400;
   font-size: 30px;
 }
+#banner .arrow {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+  min-height: 470px;
+}
+#banner .arrow img {
+  height: 60px;
+  width: 1.5%;
+}
+#banner .arrow .arrow-left {
+  cursor: pointer;
+  margin-left: 40px;
+}
+#banner .arrow .arrow-left:hover {
+  background-color: rgba(15, 15, 15, 0.1411764706);
+}
+#banner .arrow .arrow-right {
+  cursor: pointer;
+  margin-right: 40px;
+}
+#banner .arrow .arrow-right:hover {
+  background-color: rgba(15, 15, 15, 0.1411764706);
+}
+#banner .dots {
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+}
+#banner .dots .dot {
+  cursor: pointer;
+  margin-inline: 5px;
+  width: 13px;
+  height: 13px;
+  background-color: rgba(255, 255, 255, 0);
+  border: 3px solid #fff;
+  border-radius: 100%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+#banner .dots .dot_selected {
+  background-color: #fff;
+}
 
+/* Fin du code CSS pour le carousel */
 #about-us {
   display: flex;
 }
