@@ -215,7 +215,6 @@ header {
   position: absolute;
   width: 100%;
   height: 100%;
-  display: flex;
   overflow: hidden;
 }
 #banner .banner-img {
@@ -224,6 +223,7 @@ header {
   z-index: -1;
   object-fit: cover;
   object-position: center;
+  display: inline-block;
 }
 #banner p {
   font-family: "Roboto Slab", sans-serif;
@@ -247,24 +247,26 @@ header {
   align-content: center;
   width: 100%;
   min-height: 470px;
+  padding-left: 20px;
+  padding-rigth: 20px;
 }
 #banner .arrow img {
   height: 60px;
   width: 1.5%;
 }
-#banner .arrow .arrow-left {
+#banner .arrow #arrow-left,
+#banner .arrow #arrow-right {
   cursor: pointer;
+}
+#banner .arrow #arrow-left:hover,
+#banner .arrow #arrow-right:hover {
+  background-color: rgba(15, 15, 15, 0.1411764706);
+}
+#banner .arrow #arrow-left {
   margin-left: 40px;
 }
-#banner .arrow .arrow-left:hover {
-  background-color: rgba(15, 15, 15, 0.1411764706);
-}
-#banner .arrow .arrow-right {
-  cursor: pointer;
+#banner .arrow #arrow-right {
   margin-right: 40px;
-}
-#banner .arrow .arrow-right:hover {
-  background-color: rgba(15, 15, 15, 0.1411764706);
 }
 #banner .dots {
   position: absolute;
