@@ -207,7 +207,6 @@ header {
   width: 100%;
   min-height: 470px;
   position: relative;
-  overflow: hidden;
   /* Gestion des fleches du carrousel */
   /* Gestion des points du carrousel */
 }
@@ -215,9 +214,9 @@ header {
   position: absolute;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  display: flex;
 }
-#banner .banner-img {
+#banner .carousel img {
   width: 100%;
   height: 100%;
   z-index: -1;
@@ -248,7 +247,7 @@ header {
   width: 100%;
   min-height: 470px;
   padding-left: 20px;
-  padding-rigth: 20px;
+  padding-right: 20px;
 }
 #banner .arrow img {
   height: 60px;

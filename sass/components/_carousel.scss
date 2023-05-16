@@ -6,17 +6,16 @@
     .carousel {
         position: absolute;
         @include full-size;
-        overflow: hidden;
-    }
+        // overflow: hidden;
+        display: flex;
 
-    overflow: hidden;
-
-    .banner-img {
-        @include full-size;
-        z-index: -1;
-        object-fit: cover;
-        object-position: center;
-        display: inline-block;
+        img {
+            @include full-size;
+            z-index: -1;
+            object-fit: cover;
+            object-position: center;
+            display: inline-block;
+        }
     }
 
     p {
@@ -44,7 +43,7 @@
         align-content: center;
         @include banner-size;
         padding-left: 20px;
-        padding-rigth: 20px;
+        padding-right: 20px;
 
         img {
             height: 60px;
