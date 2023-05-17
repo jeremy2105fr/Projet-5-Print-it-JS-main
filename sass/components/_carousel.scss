@@ -3,10 +3,9 @@
     @include banner-size;
     position: relative;
 
-    .carousel {
+    #carousel {
         position: absolute;
         @include full-size;
-        // overflow: hidden;
         display: flex;
 
         img {
@@ -19,6 +18,7 @@
     }
 
     p {
+        position: relative;
         font-family: 'Roboto Slab', sans-serif;
         font-weight: 900;
         font-size: 50px;
@@ -83,7 +83,6 @@
             border: 3px solid #fff;
             border-radius: 100%;
             box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-            ;
         }
 
         .dot_selected {

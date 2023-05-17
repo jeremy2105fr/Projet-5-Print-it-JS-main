@@ -210,13 +210,13 @@ header {
   /* Gestion des fleches du carrousel */
   /* Gestion des points du carrousel */
 }
-#banner .carousel {
+#banner #carousel {
   position: absolute;
   width: 100%;
   height: 100%;
   display: flex;
 }
-#banner .carousel img {
+#banner #carousel img {
   width: 100%;
   height: 100%;
   z-index: -1;
@@ -225,6 +225,7 @@ header {
   display: inline-block;
 }
 #banner p {
+  position: relative;
   font-family: "Roboto Slab", sans-serif;
   font-weight: 900;
   font-size: 50px;
