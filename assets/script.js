@@ -1,7 +1,7 @@
 // Attend le chargement du DOM
 document.addEventListener("DOMContentLoaded", function () {
   // Variables
-  // Gère les flèches et les boutons
+  // Gère les flèches et les boutons via leurs ID
   const arrowLeft = document.getElementById("arrow-left");
   const arrowRight = document.getElementById("arrow-right");
   const dot1 = document.getElementById("dot-1");
@@ -132,6 +132,6 @@ document.addEventListener("DOMContentLoaded", function () {
     currentSlide = 4;
     dots();
   });
-  // Appel initiale de la fonction changeSlide
+  // Appel initial de la fonction changeSlide
   changeSlide();
 });
